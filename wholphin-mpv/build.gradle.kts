@@ -46,6 +46,10 @@ android {
             javaParameters = true
         }
     }
+    java {
+        withSourcesJar()
+        withJavadocJar()
+    }
     externalNativeBuild {
         ndkBuild {
             path = File("src/main/jni/Android.mk")
