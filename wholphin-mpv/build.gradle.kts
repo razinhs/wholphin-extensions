@@ -37,6 +37,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlin {
         compilerOptions {
@@ -90,4 +91,7 @@ publishing {
 }
 
 dependencies {
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.timber)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 }
