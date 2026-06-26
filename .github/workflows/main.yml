@@ -96,7 +96,8 @@ jobs:
         run: |
           cd wholphin-mpv/src/native
           ./buildall.sh --clean --arch arm64 mpv
-          ./buildall.sh mpv
+          ./buildall.sh --arch armv7l mpv
+          ./buildall.sh --arch x86_64 mpv
 
       - name: Build aar
         shell: bash
