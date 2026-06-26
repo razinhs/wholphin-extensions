@@ -49,7 +49,7 @@ jobs:
         with:
           path: |
             wholphin-mpv/build/libmpv/prefix
-          key: ${{ runner.os }}-libmpv-${{ hashFiles('**/wholphin-mpv/src/native/**/*.sh', '**/wholphin-mpv/.github/workflows/*.yml') }}
+          key: ${{ runner.os }}-libmpv-${{ hashFiles('**/wholphin-mpv/src/native/**/*.sh', '**/.github/workflows/*.yml') }}
 
       - name: Install dependencies
         if: steps.cache_media3_module.outputs.cache-hit != 'true' || steps.cache_libmpv_module.outputs.cache-hit != 'true'
